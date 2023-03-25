@@ -1,6 +1,6 @@
-,,,Harding VIE,Harding Neutral,Harding Cation,Dattani VIE,Dattani Neutral,Dattani Cation,Experiment,Harding Error,Dattani Error,Comment,,
-10028-15-6 ,Triatomic        ,O3 ,Ozone                  ,12.547,−225.13195,−224.67084,,,,12.73,0.183,,,,3
-100-41-4   ,                 ,C6H5C2H5,Ethylbenzene           ,8.852,−310.29199,−309.96669,,,,8.77,-0.082,,,,8
+           ,                 ,        ,                       ,Harding VIE,Harding Neutral,Harding Cation,Dattani VIE,Dattani Neutral,Dattani Cation,Experiment,Harding Error,Dattani Error,Comment,,
+10028-15-6 ,Triatomic        ,O3      ,Ozone                  ,12.547,−225.13195,−224.67084,,,,12.73,0.183 ,,,,3
+100-41-4   ,                 ,C6H5C2H5,Ethylbenzene           ,8.852 ,−310.29199,−309.96669,,,,8.77 ,-0.082,,,,8
 10043-11-5 ,Diatomic         ,BN,Boron nitride          ,11.89,−79.25773,−78.82078,,,,11.5,-0.39,,,,2
 106-97-8   ,                 ,C4H10,Butane                 ,11.567,−158.15571,−157.73064,,,,11.09,-0.477,,,,4
 108-88-3   ,                 ,C6H5CH3,Toluene                ,8.899,−271.04816,−270.72115,,-271.0507943,,8.82,-0.079,,,,7
