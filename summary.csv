@@ -102,10 +102,10 @@
 7803-62-5  ,Pentaatomic      ,Partial   ,    ,SiH4,Silane                ,12.796     ,−291.43566     ,−290.96540    ,12.79691807,-291.4356808,-290.9654027,12.3,-0.496,-0.4969180688,ever-so slightly worse,,5
            ,Atomic           ,Partial   ,ECP ,Xe , Xenon                 ,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,
 
-1, /home/nike/projects/rrg-tzeng/nike/before_March_2021/nike-mcrowley-graham/rrg-mcrowley/wob110-temp/nike/BH3_fc_6z,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,,,,,
-2, Typo in Lide's table? CCHb angle is the same as vinyl chloride but that's not the case for CCHc or CCHa angles. Vinyl fluoride has completely different numbers for these. Find original MW study. ,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,,,,,
-3, Look at note in ZMAT file,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,,,,,
-4, ED result in CRC: look for MW in the literature,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,,,,,
-5, Seems not to be in CRC!,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,,,,,
+1,,,,,,,,,,,,,,,,, /home/nike/projects/rrg-tzeng/nike/before_March_2021/nike-mcrowley-graham/rrg-mcrowley/wob110-temp/nike/BH3_fc_6z
+2,,,,,,,,,,,,,,,,,Typo in Lide's table? CCHb angle is the same as vinyl chloride but that's not the case for CCHc or CCHa angles. Vinyl fluoride has completely different numbers for these. Find original MW study.
+3,,,,,,,,,,,,,,,,, Look at note in ZMAT file
+4,,,,,,,,,,,,,,,,, ED result in CRC: look for MW in the literature
+5,,,,,,,,,,,,,,,,, Seems not to be in CRC!
 
 
