@@ -100,12 +100,12 @@
 7789-24-4  ,Diatomic         ,Partial   ,    ,LiF,Lithium fluoride       ,11.321     ,−107.30084     ,−106.88480    ,11.32214852,-107.3008425,-106.8847613,11.3,-0.021,-0.02214852081,,,1
 7803-51-2  ,Tetraatomic      ,3 Partial ,    ,PH3,Phosphine              ,10.523     ,−342.68938     ,−342.30265    ,10.52160359,-342.6894077,-342.3027459,10.59,0.067,0.06839641058,,,5
 7803-62-5  ,Pentaatomic      ,Partial   ,    ,SiH4,Silane                ,12.796     ,−291.43566     ,−290.96540    ,12.79691807,-291.4356808,-290.9654027,12.3,-0.496,-0.4969180688,ever-so slightly worse,,5
-           ,Atomic           ,Partial   ,ECP ,Xe   Xenon                 ,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,
+           ,Atomic           ,Partial   ,ECP ,Xe , Xenon                 ,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,
 
-1, /home/nike/projects/rrg-tzeng/nike/before_March_2021/nike-mcrowley-graham/rrg-mcrowley/wob110-temp/nike/BH3_fc_6z,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,,,,
-2, Typo in Lide's table? CCHb angle is the same as vinyl chloride but that's not the case for CCHc or CCHa angles. Vinyl fluoride has completely different numbers for these. Find original MW study. ,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,,,,
-3, Look at note in ZMAT file,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,,,,
-4, ED result in CRC: look for MW in the literature,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,,,,
-5, Seems not to be in CRC!,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,,,,
+1, /home/nike/projects/rrg-tzeng/nike/before_March_2021/nike-mcrowley-graham/rrg-mcrowley/wob110-temp/nike/BH3_fc_6z,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,,,,,
+2, Typo in Lide's table? CCHb angle is the same as vinyl chloride but that's not the case for CCHc or CCHa angles. Vinyl fluoride has completely different numbers for these. Find original MW study. ,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,,,,,
+3, Look at note in ZMAT file,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,,,,,
+4, ED result in CRC: look for MW in the literature,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,,,,,
+5, Seems not to be in CRC!,           ,               ,              ,           ,            ,            ,    ,      ,             ,                      ,,,,,,
 
 
