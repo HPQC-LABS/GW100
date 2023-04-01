@@ -42,15 +42,6 @@ H2 3 {R_OH}  2 {A2} 1 {D1}
 O2 2 {R_CO2} 3 {A3} 4 {D2}
 '''
 
-# XYZ coordinates:
-molecule_xyz = '''
-O  0.9858 0.0000  2.0307
-H -1.0241 0.0000  1.7361
-C  0.0000 0.0000  1.3430
-O  0.0000 0.0000  0.0000
-H  0.9329 0.0000 -0.2728
-'''
-
 # Energy calculation for neutral molecule
 neut_mol = pyscf.M(atom = molecule_xyz, basis = 'def2-TZVPP', verbose=9, spin=0, charge=0)
 #neut_mol.symmetry = False
