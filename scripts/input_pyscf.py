@@ -25,46 +25,54 @@ def stable_opt_internal(mf):
 
 
 # XYZ coordinates:
-# molecule_xyz = '''
-# O  0.9858 0.0000  2.0307
-# H -1.0241 0.0000  1.7361
-# C  0.0000 0.0000  1.3430
-# O  0.0000 0.0000  0.0000
-# H  0.9329 0.0000 -0.2728
-# '''
+molecule_xyz = '''
+O  0.9858 0.0000  2.0307
+H -1.0241 0.0000  1.7361
+C  0.0000 0.0000  1.3430
+O  0.0000 0.0000  0.0000
+H  0.9329 0.0000 -0.2728
+'''
+
+
+# Z-matrix:
+R_CO1 = 1.343
+R_CH = 1.097
+R_CO2 = 1.202
+R_OH = 0.972
+
+A1 = 111
+A2 = 106.3
+A3 = 124.9
+
+D1 = 180
+D2 = 0
+
+molecule_zmat = f'''
+H1
+C1 1 {R_CH}
+O1 2 {R_CO1} 1 {A1}
+H2 3 {R_OH}  2 {A2} 1 {D1}
+O2 2 {R_CO2} 3 {A3} 4 {D2}
+'''
 
 if __name__ == '__main__':
 
+    ## Constants
     VERBOSITY = 9
     CONV_TOL = 1e-7
     BASIS = 'def2-TZVPP'
+    FROZEN = 3
+    USE_ZMAT = True
 
-    # Z-matrix:
-    R_CO1 = 1.343
-    R_CH = 1.097
-    R_CO2 = 1.202
-    R_OH = 0.972
-
-    A1 = 111
-    A2 = 106.3
-    A3 = 124.9
-
-    D1 = 180
-    D2 = 0
-
-    molecule_zmat = f'''
-    H1
-    C1 1 {R_CH}
-    O1 2 {R_CO1} 1 {A1}
-    H2 3 {R_OH}  2 {A2} 1 {D1}
-    O2 2 {R_CO2} 3 {A3} 4 {D2}
-    '''
+    if USE_ZMAT:
+        molecule = molecule_zmat
+    else:
+        molecule = molecule_xyz
 
     HARTREE_TO_EV_FACTOR = dict(physical_constants)['Hartree energy in eV'][0]
-    FROZEN = 3
-    
+
     # Energy calculation for neutral molecule
-    neut_mol = pyscf.M(atom = molecule_zmat, basis = BASIS, verbose=VERBOSITY, spin=0, charge=0)
+    neut_mol = pyscf.M(atom = molecule, basis = BASIS, verbose=VERBOSITY, spin=0, charge=0)
     #neut_mol.symmetry = False
     #neut_mhf = neut_mol.UHF().set(conv_tol=1e-10,max_cycle=999,direct_scf_tol=1e-14) # Hartree-Fock calculation, mean-field object created
     neut_mhf = scf.UHF(neut_mol).run()                          
@@ -75,7 +83,7 @@ if __name__ == '__main__':
     neut_E   = neut_mcc.e_tot + neut_et                                              #
     
     # Calculation for cation molecule
-    cat_mol = pyscf.M(atom = molecule_zmat, basis = BASIS, verbose=VERBOSITY, spin=1, charge=1)
+    cat_mol = pyscf.M(atom = molecule, basis = BASIS, verbose=VERBOSITY, spin=1, charge=1)
     #cat_mol.symmetry = False
     #cat_mhf = cat_mol.UHF().set(conv_tol=1e-10,max_cycle=999,direct_scf_tol=1e-14) # Hartree-Fock calculation, mean-field object created
     cat_mhf = scf.UHF(cat_mol).run()                          
