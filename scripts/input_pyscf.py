@@ -43,7 +43,7 @@ O2 2 {R_CO2} 3 {A3} 4 {D2}
 '''
 
 # Energy calculation for neutral molecule
-neut_mol = pyscf.M(atom = molecule_xyz, basis = 'def2-TZVPP', verbose=9, spin=0, charge=0)
+neut_mol = pyscf.M(atom = molecule_zmat, basis = 'def2-TZVPP', verbose=9, spin=0, charge=0)
 #neut_mol.symmetry = False
 #neut_mhf = neut_mol.UHF().set(conv_tol=1e-10,max_cycle=999,direct_scf_tol=1e-14) # Hartree-Fock calculation, mean-field object created
 neut_mhf = scf.UHF(neut_mol).run()                          
@@ -54,7 +54,7 @@ neut_et  = neut_mcc.ccsd_t()                                                    
 neut_E   = neut_mcc.e_tot + neut_et                                              #
 
 # Calculation for cation molecule
-cat_mol = pyscf.M(atom = molecule_xyz, basis = 'def2-TZVPP', verbose=9, spin=1, charge=1)
+cat_mol = pyscf.M(atom = molecule_zmat, basis = 'def2-TZVPP', verbose=9, spin=1, charge=1)
 #cat_mol.symmetry = False
 #cat_mhf = cat_mol.UHF().set(conv_tol=1e-10,max_cycle=999,direct_scf_tol=1e-14) # Hartree-Fock calculation, mean-field object created
 cat_mhf = scf.UHF(cat_mol).run()                          
@@ -66,18 +66,11 @@ cat_E   = cat_mcc.e_tot + cat_et                                                
                                                                                                       
 E_diff  = cat_E - neut_E                                                         # Ionization energy
 
-# print("Neutral molecule SCF energy (hartrees) =", neut_)
 print("Neutral molecule UCCSD energy (hartrees) =", neut_mcc.e_tot)
 print("Neutral molecule UCCSD(T) energy (hartrees) =", neut_E)
 
-# print("Cation molecule SCF energy (hartrees) =", cat_)
 print("Cation molecule UCCSD energy from output file (hartrees) =", cat_mcc.e_tot)
 print("Cation molecule UCCSD(T) energy (hartrees) =", cat_E)
 
-print("UCCSD energy difference (hartrees)= ", cat_mcc.e_tot-neut_mcc.e_tot)
-print("UCCSD energy difference (eV) = ", 27.21138624598*(cat_mcc.e_tot-neut_mcc.e_tot)) # Use 27.211386245988(53) eV from 2018 CODATA
-
 print("UCCSD(T) energy difference (hartrees)= ", E_diff)
-print("UCCSD(T) energy difference (eV) = ", 27.21138624598*E_diff)                      # Use 27.211386245988(53) eV from 2018 CODATA
-
-
+print("UCCSD(T) energy difference (eV) = ", 27.21138624598*E_diff)                # Use 27.211386245988(53) eV from 2018 CODATA
